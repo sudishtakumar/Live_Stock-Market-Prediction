@@ -200,13 +200,6 @@ Here's an overview of the Flask App:
 ![Flask App GIF](https://github.com/user-attachments/assets/86f149d3-d746-4008-8a0c-6dfd6f539f54)
 
 
----
-
-## Meet the Team
-
-<table align="center"> <tr> <th> </th> <th><b>Sudishta kumar yadav</b></th> </tr> <tr> <td> <picture> <source srcset="https://static.vecteezy.com/system/resources/previews/024/405/365/original/briefcase-icon-isolated-white-background-png.png" media="(prefers-color-scheme: dark)"> <img width="30" src="https://img.icons8.com/ios-glyphs/30/000000/briefcase.png" alt="Role"> </picture><br><b>Role</b> </td> <td>Project Planner & Developer</td> <td>Data l.com">Email</a></td> </tr> </table>
-
----
 
 ## Resources
 
@@ -235,4 +228,4 @@ Here's an overview of the Flask App:
 
 - Drop a 🌟 if you find this repository useful.<br><br>
 - If you have any doubts or suggestions, feel free to reach us.<br><br>
-- **Contribute and Discuss:** Feel free to open <a href= "https://github.com/madhurimarawat/Stock-Market-Prediction/issues">issues 🐛</a>, submit <a href = "https://github.com/madhurimarawat/Stock-Market-Prediction/pulls">pull requests 🛠️</a>, or start <a href = "https://github.com/madhurimarawat/Stock-Market-Prediction/discussions">discussions 💬</a> to help improve this repository!
+- **Contribute and Discuss:** Feel free to open <a href= "_________">issues 🐛</a>, submit <a href = _______">pull requests 🛠️</a>, or start <a href = _________">discussions 💬</a> to help improve this repository!
