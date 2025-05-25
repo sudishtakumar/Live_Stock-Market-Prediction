@@ -185,11 +185,7 @@ Here's an overview of the Streamlit App:
        title="Streamlit App View 2">
 </a>
 
-<a href="https://stock-market-numerical-text-hybrid-prediction.streamlit.app/" target="_blank">
-  <img src="https://github.com/madhurimarawat/Stock-Market-Prediction/blob/main/Codes/Historical_Data_Analysis/App_Snapshots/Streamlit_App/App_View_3.png" 
-       alt="Streamlit App View 3" 
-       title="Streamlit App View 3">
-</a>
+
 
 
 3. **Flask:**
