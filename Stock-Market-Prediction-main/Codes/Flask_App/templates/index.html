@@ -1,0 +1,118 @@
+<!--
+    This HTML document serves as the front-end interface for a stock market prediction web application.
+    Users can input relevant stock data such as the opening price, high, low, and volume to predict the
+    closing stock price for selected companies. The document is styled with an external CSS file, and
+    Flask's Jinja2 templating engine is used for dynamic data population. Additionally, jQuery is included
+    for potential client-side interactions.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata about the document -->
+    <meta charset="UTF-8"> <!-- Sets the character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures the page is responsive -->
+    <title>Stock Market Prediction</title> <!-- Page title displayed on the browser tab -->
+
+    <!-- Link to the external CSS file for styling -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+    <!-- External favicon for the page -->
+    <link rel="icon" href="https://png.pngtree.com/png-clipart/20230923/original/pngtree-bull-and-bear-symbols-depict-stock-market-trends-vector-png-image_12564847.png" type="image/png">
+
+    <!-- jQuery library for potential client-side scripting -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Inline CSS for specific element styling -->
+    <style>
+        /* Styling for the selected company display */
+        #selectedCompany {
+            text-align: center; /* Center-aligns the text */
+            font-size: 1.5em; /* Sets the font size */
+            color: #333; /* Dark gray color */
+            margin-top: 10px; /* Adds space above the element */
+        }
+
+        /* Styling for the prediction result display */
+        #predictionResult {
+            text-align: center; /* Center-aligns the text */
+            color: #333; /* Dark gray color */
+            margin-top: 20px; /* Adds space above the element */
+        }
+    </style>
+</head>
+<body>
+    <!-- Main container for the application content -->
+    <div class="container">
+        <!-- Main heading of the page -->
+        <h1>Stock Market Prediction</h1>
+        
+        <!-- Brief description of the application -->
+        <p>
+            Welcome to our stock market prediction app. Here, you can input key data such as the opening price,
+            high, low, and volume to predict the closing price of popular stocks.
+        </p>
+        
+        <!-- Explanation section for the input fields -->
+        <p>
+            <strong>Explanations:</strong>
+            <ul>
+                <!-- List items explaining each input field -->
+                <li><strong>Open:</strong> The stock's price at the beginning of the trading day.</li>
+                <li><strong>High:</strong> The highest price of the stock during the day.</li>
+                <li><strong>Low:</strong> The lowest price of the stock during the day.</li>
+                <li><strong>Close:</strong> The price at which the stock closed at the end of the trading day.</li>
+                <li><strong>Volume:</strong> The total number of shares traded during the day.</li>
+            </ul>
+        </p>
+
+        <!-- Form for collecting user input -->
+        <form id="predictionForm">
+            <!-- Dropdown for selecting a company -->
+            <label for="company">Select a company:</label>
+            <select name="company" id="company" required>
+                <!-- Placeholder option -->
+                <option value="" disabled selected>Select a company</option>
+                <!-- Jinja2 loop to populate the dropdown with company options dynamically -->
+                {% for name, ticker in ticker_mapping.items() %}
+                    <option value="{{ name|lower }}">{{ name }}</option> <!-- Option showing company names -->
+                {% endfor %}
+            </select>
+            
+            <!-- Display selected company name -->
+            <div id="selectedCompany"></div>
+            <br>
+
+            <!-- Input field for the opening price -->
+            <label for="open">Open Price:</label>
+            <input type="number" step="0.01" name="open" id="open" placeholder="Enter open price" required>
+            <br><br>
+
+            <!-- Input field for the high price -->
+            <label for="high">High Price:</label>
+            <input type="number" step="0.01" name="high" id="high" placeholder="Enter high price" required>
+            <br><br>
+
+            <!-- Input field for the low price -->
+            <label for="low">Low Price:</label>
+            <input type="number" step="0.01" name="low" id="low" placeholder="Enter low price" required>
+            <br><br>
+
+            <!-- Input field for the volume -->
+            <label for="volume">Volume:</label>
+            <input type="number" step="1" name="volume" id="volume" placeholder="Enter volume" required>
+            <br><br>
+
+            <!-- Submit button to trigger the prediction -->
+            <button type="submit">Predict</button>
+        </form>
+
+        <!-- Container to display the prediction result -->
+        <div id="predictionResult"></div>
+    </div>
+</body>
+
+<!-- External JavaScript file for handling client-side logic -->
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</html>

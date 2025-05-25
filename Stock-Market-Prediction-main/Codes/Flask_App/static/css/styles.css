@@ -1,0 +1,149 @@
+/* 
+    CSS Stylesheet for the Stock Market Prediction App 🎨
+
+    This stylesheet defines the visual layout and styling for the Stock Market Prediction application. 
+    It provides a clean, pastel-themed design with a responsive, user-friendly form for stock prediction.
+    The goal is to make the interface visually appealing while maintaining simplicity and ease of use.
+
+    Key Elements:
+    - A soft pastel gradient background, transitioning from light pink to lavender.
+    - Centralized content container with a clean, modern design.
+    - Input fields, labels, and buttons styled for clarity and easy interaction.
+    - Hover and focus effects for better user experience.
+
+    Key Features:
+    - Flexbox is used to center the content vertically and horizontally.
+    - Clear and consistent color scheme that aligns with a calm, pastel theme.
+    - Button hover and focus effects for better feedback on user interaction.
+    - Form inputs are styled for better readability and usability.
+*/
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom right, #ffb3ba, #c1a3e0);
+    /* Soft pastel gradient from light pink to lavender */
+    color: #333;
+    /* Dark grey text for contrast */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    /* Center content horizontally */
+    align-items: center;
+    /* Center content vertically */
+}
+
+.container {
+    max-width: 800px;
+    /* Maximum width of the container */
+    padding: 20px;
+    /* Padding around content */
+    border-radius: 8px;
+    /* Rounded corners for the container */
+    box-shadow: none;
+    /* No shadow for the container */
+    text-align: center;
+    /* Centered text inside the container */
+}
+
+h1 {
+    text-align: center;
+    color: #5a3e6b;
+    /* A calm, muted purple for the header */
+    font-size: 2rem;
+    /* Font size for the header */
+    margin-bottom: 20px;
+    /* Space below the header */
+}
+
+form {
+    margin-top: 20px;
+    /* Space above the form */
+}
+
+label {
+    display: block;
+    /* Display label as block-level element */
+    margin-bottom: 8px;
+    /* Space below the label */
+    font-weight: bold;
+    /* Bold font for labels */
+    color: #5a3e6b;
+    /* Matching muted purple for label text */
+}
+
+input,
+select,
+button {
+    width: 100%;
+    /* Full width of input fields, select dropdown, and button */
+    padding: 12px;
+    /* Padding for form controls */
+    margin-bottom: 20px;
+    /* Space below each input field */
+    border: 1px solid #d3d3d3;
+    /* Light gray border for inputs */
+    border-radius: 8px;
+    /* Rounded borders for form controls */
+    background-color: #f9f9f9;
+    /* Light gray background for inputs */
+    color: #333;
+    /* Default text color for form controls */
+}
+
+input:focus,
+select:focus,
+button:focus {
+    outline: none;
+    /* Remove outline on focus */
+    border-color: #f5b7b1;
+    /* Soft peach border color on focus */
+}
+
+button {
+    background-color: #ff7f50;
+    /* Coral color for the button */
+    color: white;
+    /* White text color on the button */
+    border: none;
+    /* Remove default button border */
+    cursor: pointer;
+    /* Pointer cursor to indicate a clickable button */
+    transition: background-color 0.3s;
+    /* Smooth transition for background color change */
+    font-size: 1rem;
+    /* Font size for button text */
+}
+
+button:hover {
+    background-color: #ff6f47;
+    /* Darker coral color when hovering */
+}
+
+ul {
+    text-align: left;
+    /* Left-align list items */
+    list-style-type: none;
+    /* Remove default list bullets */
+    padding: 0;
+    /* Remove padding around the list */
+    color: #6e4f71;
+    /* Muted purple color for list text */
+}
+
+ul li {
+    margin-bottom: 12px;
+    /* Space below each list item */
+}
+
+a {
+    color: #ff7f50;
+    /* Coral color for links */
+    text-decoration: none;
+    /* Remove underline from links */
+}
+
+a:hover {
+    text-decoration: underline;
+    /* Underline links on hover */
+}
